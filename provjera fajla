@@ -16,7 +16,7 @@ int main()
     if(pokazivacFajla==NULL)
         cout<<"Fajl je prazan."<<endl;
     fclose(pokazivacFajla);
-    pokazivacFajla=fopen("treciC","r");
+    pokazivacFajla=fopen("petiC","r");
     cout<<"U nasem fajlu nalazi se sljedeci text: "<<endl;
     do{
         text=getc(pokazivacFajla);
