@@ -1,0 +1,18 @@
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+int main()
+{
+    char text;
+    FILE *pokazivacFajla;
+
+    pokazivacFajla=fopen("treciC","w");
+    do{
+        text=getchar();
+        putc(text,pokazivacFajla);
+    }
+    while(text!='\n');
+    fclose(pokazivacFajla);
+    return 0;
+}
