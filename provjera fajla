@@ -1,0 +1,28 @@
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+int main()
+{
+    char text;
+    FILE *pokazivacFajla;
+
+    pokazivacFajla=fopen("treciC","w");
+    do{
+        text=getchar();
+        putc(text,pokazivacFajla);
+    }
+    while(text!='\n');
+    if(pokazivacFajla==NULL)
+        cout<<"Fajl je prazan."<<endl;
+    fclose(pokazivacFajla);
+    pokazivacFajla=fopen("treciC","r");
+    cout<<"U nasem fajlu nalazi se sljedeci text: "<<endl;
+    do{
+        text=getc(pokazivacFajla);
+        cout<<text;
+    }
+    while(text!=EOF);
+   fclose(pokazivacFajla);
+    return 0;
+}
